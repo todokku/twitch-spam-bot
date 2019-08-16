@@ -36,6 +36,8 @@ Bot.on('error', (...p) => {
 function start(auto) {
 	console.log((auto ? "AUTO " : "MANUAL ") + "START");
 	disabled = false;
+	if (autoid) clearTimeout(autoid);
+	autoid = false;
 	if (iid) clearInterval(iid);
 	iid = false;
 	i = 0;
