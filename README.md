@@ -2,5 +2,5 @@
 Chat spam bot for twitch
 
 ## Setup
-- npm i twitch-bot
+- npm i
 - put your data inside of file

@@ -1,0 +1,22 @@
+{
+  "name": "twitch-spam-bot",
+  "version": "0.0.3",
+  "description": "Chat spam bot for twitch",
+  "main": "spambot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/33kk/twitch-spam-bot.git"
+  },
+  "author": "33kk & EgrorBs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/33kk/twitch-spam-bot/issues"
+  },
+  "homepage": "https://github.com/33kk/twitch-spam-bot#readme",
+  "dependencies": {
+    "twitch-bot": "^1.3.5"
+  }
+}
