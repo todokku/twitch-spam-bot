@@ -1,7 +1,9 @@
+let i = 0; // dont touch you bitch
+
 const TwitchBot = require('twitch-bot');
-const BOTNAME = "USERNAME";
-const OAUTH_TOKEN = "TOKEN";
-const CHANNEL = "CHANNEL"
+const BOTNAME = "33kk";
+const OAUTH_TOKEN = "oauth:7mwsqqh8gx3gciymv577t8uzkdczev";
+const CHANNEL = "zakvielchannel"
 const startCommand = "START BOT"
 const stopCommand = "ЗАТКНИСЬ ТВАРЬ"
 const disableCommand = "ЗАТКНИСЬ НАВСЕГДА"
@@ -20,7 +22,6 @@ function BOT() {
 	let disabled = false;
 	let autoid = false;
 	let iid = false;
-	let i = 0;
 	
 	Bot.on('join', (...p) => {
 		console.log("JOIN: ", ...p);
