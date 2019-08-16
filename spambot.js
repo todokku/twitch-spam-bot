@@ -1,5 +1,3 @@
-let i = 0; // dont touch you bitch
-
 const TwitchBot = require('twitch-bot');
 const BOTNAME = "33kk";
 const OAUTH_TOKEN = "oauth:";
@@ -7,7 +5,7 @@ const CHANNEL = "zakvielchannel"
 const startCommand = "START BOT"
 const stopCommand = "ЗАТКНИСЬ ТВАРЬ"
 const disableCommand = "ЗАТКНИСЬ НАВСЕГДА"
-let   text = ("D: ".repeat(15) + " (ТЕКСТ ТЕКСТ АТАТАТА #" + i + i + ") ").repeat(4) + " для остановки бота на 5 минут напишыте " + stopCommand
+let   text = ("D: ".repeat(15) + " (ТЕКСТ ТЕКСТ АТАТАТА #$i$) ").repeat(4) + " для остановки бота на 5 минут напишыте " + stopCommand
 const delay = 2000
 const autowaittime = 5 * 60 * 1000
 
@@ -25,6 +23,7 @@ let disablebyanyone = false
 let disabled = false;
 let autoid = false;
 let iid = false;
+let i = 0;
 
 Bot.on('join', (...p) => {
 	console.log("JOIN: ", ...p);
@@ -41,7 +40,7 @@ function start(auto) {
 	i = 0;
 	iid = setInterval(() => {
 		i += 1;
-		Bot.say(text);
+		Bot.say(text.replace('$i$', i));
 		console.log("Message #" + i);
 	}, delay);
 }
