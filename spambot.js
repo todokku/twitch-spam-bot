@@ -37,10 +37,14 @@ function start(auto) {
 	console.log((auto ? "AUTO " : "MANUAL ") + "START");
 	disabled = false;
 	if (iid) clearInterval(iid);
+	iid = false;
 	i = 0;
 	iid = setInterval(() => {
 		i += 1;
-		Bot.say(text.replace('$i$', i));
+		let curText = text.replace('$i$', i);
+		if (curText.length >= 490)
+			curText = "..." + curText.substring((curText.length - 490) + 5);
+		Bot.say(curText);
 		console.log("Message #" + i);
 	}, delay);
 }
