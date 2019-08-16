@@ -57,11 +57,12 @@ Bot.on('message', (msg) => {
 		if (!disabled) {
 			if (iid) clearInterval(iid);
 			iid = false;
-			console.log("STOP by " + msg.username + " at msg #" + i);
 			if (msg.message == disableCommand && (msg.username === BOTNAME.toLowerCase() || disablebyanyone)) {
+				console.log("STOP by " + msg.username + " at msg #" + i);
 				disabled = true;
 			}
 			else {
+				console.log("STOP FOR + autowaittime + by " + msg.username + " at msg #" + i);
 				if (autoid) clearTimeout(autoid);
 				autoid = false;
 				autoid = setTimeout(() => {
