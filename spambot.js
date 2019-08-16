@@ -1,23 +1,22 @@
 const TwitchBot = require('twitch-bot');
-const BOTNAME = "NICKNAME";
+const BOTNAME = "USERNAME";
 const OAUTH_TOKEN = "TOKEN";
+const CHANNEL = "CHANNEL"
+const startCommand = "START BOT"
+const stopCommand = "ЗАТКНИСЬ ТВАРЬ"
+const disableCommand = "ЗАТКНИСЬ НАВСЕГДА"
+const text = ("D: ".repeat(15) + " (ТЕКСТ #" + i + ") ").repeat(4) + " для остановки бота на 5 минут напишыте " + stopCommand + " или дайте мут на сколько нужно, плиз не пермач))"
+const delay = 2000
+const autowaittime = 5 * 60 * 1000
 
-function TEMP_TEST() {
+function BOT() {
 	Bot = new TwitchBot({
 		username: BOTNAME,
 		oauth: OAUTH_TOKEN,
-		channels: ["CHANNEL"]
+		channels: [CHANNEL]
 	})
 	
-	let startCommand = "START BOT"
-	let stopCommand = "ЗАТКНИСЬ ТВАРЬ"
-	let disableCommand = "ЗАТКНИСЬ НАВСЕГДА"
 	let disablebyanyone = false
-	
-	let text = ("D: ".repeat(15) + " (ТЕКСТ #" + i + ") ").repeat(4) + " для остановки бота на 5 минут напишыте " + stopCommand + " или дайте мут на сколько нужно, плиз не пермач))"
-	let delay = 2000
-	let autowaittime = 5 * 60 * 1000
-	
 	let disabled = false;
 	let autoid = false;
 	let iid = false;
